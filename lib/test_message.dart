@@ -1,12 +1,14 @@
-import 'package:rongcloud_im_plugin/rongcloud_im_plugin.dart';
 import 'dart:convert' show json;
+
+import 'package:rongcloud_im_plugin/rongcloud_im_plugin.dart';
 
 //app 层的测试消息
 class TestMessage extends MessageContent {
   static const String objectName = "RCD:TstMsg";
 
-  String content;
-  String extra;
+  String? content;
+  String? extra;
+
   @override
   void decode(String jsonStr) {
     Map map = json.decode(jsonStr.toString());
@@ -24,7 +26,7 @@ class TestMessage extends MessageContent {
 
   @override
   String encode() {
-    Map map = {"content": this.content, "extra": this.extra};
+    Map map = {"content": this.content ?? "", "extra": this.extra ?? ''};
 
     // encode 消息内容中携带的发送者的用户信息
     if (this.sendUserInfo != null) {
@@ -42,7 +44,7 @@ class TestMessage extends MessageContent {
 
   @override
   String conversationDigest() {
-    return content;
+    return content ?? "";
   }
 
   @override

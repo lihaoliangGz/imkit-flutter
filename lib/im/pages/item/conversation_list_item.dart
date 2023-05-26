@@ -52,7 +52,7 @@ class _ConversationListItemState extends State<ConversationListItem> {
 
   Widget _buildPortrait() {
     return Stack(
-      overflow: Overflow.visible,
+      //overflow: Overflow.visible,
       children: <Widget>[
         Row(
           children: <Widget>[

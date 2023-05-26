@@ -30,28 +30,32 @@
     <!-- MeiZu 配置结束 < -->
 
     <application
-        android:name="io.flutter.app.FlutterApplication"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher"
         android:label="RC_Flutter_Demo"
-        android:usesCleartextTraffic="true"
-        android:icon="@mipmap/ic_launcher">
+        android:usesCleartextTraffic="true">
         <activity
             android:name="com.example.rongcloud_im_plugin_example.MainActivity"
-            android:launchMode="singleTop"
-            android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
+            android:launchMode="singleTop"
+            android:theme="@style/LaunchTheme"
             android:windowSoftInputMode="adjustResize">
             <!-- This keeps the window background of the activity showing
                  until Flutter renders its first frame. It can be removed if
                  there is no splash screen (such as the default splash screen
                  defined in @style/LaunchTheme). -->
-            <meta-data
-                android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"
-                android:value="true" />
+            <!--            <meta-data-->
+            <!--                android:name="io.flutter.app.android.SplashScreenUntilFirstFrame"-->
+            <!--                android:value="true" />-->
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="flutterEmbedding"
+                android:value="2" />
         </activity>
         <provider
             android:name="androidx.core.content.FileProvider"
@@ -156,10 +160,10 @@
         <!-- vivo 推送配置项 -->
         <meta-data
             android:name="com.vivo.push.api_key"
-            android:value="您的 vivo 推送平台生成 AppKey"/>
+            android:value="您的 vivo 推送平台生成 AppKey" />
         <meta-data
             android:name="com.vivo.push.app_id"
-            android:value="您的 vivo 推送平台生成 AppID"/>
+            android:value="您的 vivo 推送平台生成 AppID" />
         <!-- vivo 推送配置 结束 -->
 
         <!-- MeiZu 配置开始 < -->

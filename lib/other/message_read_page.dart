@@ -7,7 +7,7 @@ import '../im/util/user_info_datesource.dart' as example;
 
 class MessageReadPage extends StatefulWidget {
   final prefix.Message message;
-  const MessageReadPage({Key key, this.message}) : super(key: key);
+  const MessageReadPage({super.key, required this.message});
 
   @override
   State<StatefulWidget> createState() => _MessageReadPageState(message);

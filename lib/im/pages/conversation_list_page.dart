@@ -30,7 +30,7 @@ class _ConversationListPageState extends State<ConversationListPage>
     RCConversationType.Private,
     RCConversationType.Group
   ];
-  ScrollController _scrollController;
+  late ScrollController _scrollController;
   double mPosition = 0;
 
   @override
